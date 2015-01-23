@@ -1,53 +1,63 @@
-body
-  padding-top 20px
-  padding-bottom 20px
+/*@import "variables"*/
 
-.header,
-.marketing,
-.footer
-  padding-left 15px
-  padding-right 15px
 
-.header
-  border-bottom 1px solid #e5e5e5
-  margin-bottom 30px
+$var1 = #d32f2f
+$var2 = #d3ba44
+
+$k = '2'
+$cc = '-c'
+
+$var = $var+$k
+
+
+
+
+md-red-50 = #ffebee
+md-red-100 = #ffcdd2
+md-red-200 = #ef9a9a
+md-red-300 = #e57373
+md-red-400 = #ef5350
+md-red-500 = #f44336
+md-red-600 = #e53935
+md-red-700 = #d32f2f
+md-red-800 = #c62828
+md-red-900 = #b71c1c
+md-red-a100 = #ff8a80
+md-red-a200 = #ff5252
+md-red-a400 = #ff1744
+md-red-a700 = #d50000
+
+
+
+$t = 'md-red-300'
+$c5 = '300'
+
+
+$r50 = $col+'1'
+$r100= $col+'2'
+$r200= $col+'3'
+$r300= $t+''
+$r400= $col+'5'
+$r500= $col+$c5
+$r600= $col+'7'
+$r700= $col+'8'
+$r800= $col+'9'
+$r900= $col+'10'
+
+.content
+  height: auto
+  width: 980px
+  margin: 0 auto
+  background-color: $var
+
+  h1
+    color: $col10
+  h2
+    color: $r600
   h3
-    margin-top 0
-    margin-bottom 0
-    line-height 40px
-    padding-bottom 19px
+    color: $r300
 
-.footer
-  padding-top 19px
-  color #777
-  border-top 1px solid #e5e5e5
-
-@media (min-width:768px)
-  .container
-    max-width 730px
-
-@media screen and (min-width: 768px)
-  .header,
-  .marketing,
-  .footer
-    padding-left 0
-    padding-right 0
-
-.container-narrow
-  & > hr
-    margin 30px 0
-
-.jumbotron
-  text-align center
-  border-bottom 1px solid #e5e5e5
-  border-bottom 0
-  .btn
-    font-size 21px
-    padding 14px 24px
-
-.marketing
-  margin 40px 0
-  p
-    & + h4
-      margin-top 28px
-
+.clearfix:after
+  clear: both
+  width: 100%
+  height: 0px

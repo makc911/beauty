@@ -1,35 +1,25 @@
-div.header
-  ul.nav.nav-pills.pull-right
-    li.active
-      a(ng-href="#") Home
-    li
-      a(ng-href="#") About
-    li
-      a(ng-href="#") Contact
-  h3.text-muted beauty front
+header.header
+  .content.clearfix
+    h1 Test text h1
+    h2 Test text h1
+    h3 Test text h1
+.main_wrap
+  #about_wrap.wrapper.about_wrap
+    .content.clearfix
+      | here must be 'about text'
+  #depil_wrap.wrapper.depil_wrap
+    .content.clearfix
+      | here must be about depilation text
+  #resnici_wrap.wrapper.resnici_wrap
+    .content.clearfix
+      | here must be about growing text
+  #tatu_wrap.wrapper.tatu_wrap
+    .content.clearfix
+      | here must be about tatu text
+  #contact_wrap.wrapper.contact_wrap
+    .content.clearfix
+      | here must be map and other contact text
 
-div.jumbotron
-  h1 'Allo, 'Allo!
-  p.lead
-    img(src="images/yeoman.png", alt="I'm Yeoman")
-    br
-    | Always a pleasure scaffolding your apps.
-  p
-    a.btn.btn-lg.btn-success(ng-href="#")
-      | Splendid! 
-      span.glyphicon.glyphicon-ok
-
-div.row.marketing
-  h4 HTML5 Boilerplate
-  p HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-
-  h4 Angular
-  p AngularJS is a toolset for building the framework most suited to your application development.
-
-  h4 Karma
-  p Spectacular Test Runner for JavaScript.
-
-div.footer
-  p
-    span.glyphicon.glyphicon-heart
-    |  from the Yeoman team
+footer.footer
+  .content.clearfix
+    | here must be footer
