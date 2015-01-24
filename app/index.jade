@@ -1,22 +1,24 @@
 doctype html
 <!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" ng-app="beautyApp">
 <![endif]-->
 <!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8">
+<html class="no-js lt-ie9 lt-ie8" ng-app="beautyApp">
 <![endif]-->
 <!--[if IE 8]>
-<html class="no-js lt-ie9">
+<html class="no-js lt-ie9" ng-app="beautyApp">
 <![endif]-->
 <!--[if gt IE 8]><!-->
-html.no-js
+html(ng-app="beautyApp")
 <!--<![endif]-->
 head
   meta(charset="utf-8")
   meta(http-equiv="X-UA-Compatible", content="IE=edge")
-  title
+  title Nissodis
   meta(name="description", content="")
   meta(name="viewport", content="width=device-width")
+
+  link(href='http://fonts.googleapis.com/css?family=Marck+Script|Roboto:500,300,700,400&subset=cyrillic,latin' rel='stylesheet' type='text/css')
   // Place favicon.ico and apple-touch-icon.png in the root directory
   // build:css styles/vendor.css
   // bower:css
@@ -26,7 +28,7 @@ head
   // build:css(.tmp) styles/main.css
   link(rel="stylesheet", href="styles/main.css")
   // endbuild
-body(ng-app="beautyApp")
+body()
   <!--[if lt IE 7]>
   p.browsehappy
     | You are using an
@@ -36,9 +38,15 @@ body(ng-app="beautyApp")
     |  to improve your experience.
   <![endif]-->
 
+  
   // Add your site or application content here
 
   div.container(ng-view)
+
+  footer.footer(ng-controller="FooterCtrl")
+    .content.clearfix
+      .f_item(ng-repeat="i in navBar")
+        {{$index}}
 
 
   // Google Analytics: change UA-XXXXX-X to be your site's ID
@@ -70,5 +78,9 @@ body(ng-app="beautyApp")
 
   // build:js(.tmp) scripts/main.js
   script(src="scripts/app.js")
+
+  //controllers
   script(src="scripts/controllers/main.js")
+  script(src="scripts/controllers/header.js")
+  script(src="scripts/controllers/footer.js")
   // endbuild

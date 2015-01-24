@@ -7,6 +7,7 @@ angular
     'ngSanitize',
     'ngRoute'
   ])
+
   .config ($routeProvider) ->
     $routeProvider
       .when '/',

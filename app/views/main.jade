@@ -1,9 +1,24 @@
-header.header
+
+header.header()
+  .hhh(ng-include="'/views/header.html'")
+  .title_wrap
+    h1
+      | Nissodis
+    p
+      | Мастер профессионал превратит ваши мечты о краcоте в жизнь
+    div
+      {{test.message}}
+    nav.main_nav
+      .nav_item(ng-repeat="i in [1,2,3,4,5]")
+        {{$idex}} ssssssssssssss
+        a(href="" ng-bind="i")
+
   .content.clearfix
-    h1 Test text h1
-    h2 Test text h1
-    h3 Test text h1
-.main_wrap
+
+
+
+
+.content_wrap.clearfix
   #about_wrap.wrapper.about_wrap
     .content.clearfix
       | here must be 'about text'
@@ -20,6 +35,3 @@ header.header
     .content.clearfix
       | here must be map and other contact text
 
-footer.footer
-  .content.clearfix
-    | here must be footer

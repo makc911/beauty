@@ -1,63 +1,49 @@
-/*@import "variables"*/
+@import "variables"
 
+/*-----------------------------------*/
 
-$var1 = #d32f2f
-$var2 = #d3ba44
-
-$k = '2'
-$cc = '-c'
-
-$var = $var+$k
-
-
-
-
-md-red-50 = #ffebee
-md-red-100 = #ffcdd2
-md-red-200 = #ef9a9a
-md-red-300 = #e57373
-md-red-400 = #ef5350
-md-red-500 = #f44336
-md-red-600 = #e53935
-md-red-700 = #d32f2f
-md-red-800 = #c62828
-md-red-900 = #b71c1c
-md-red-a100 = #ff8a80
-md-red-a200 = #ff5252
-md-red-a400 = #ff1744
-md-red-a700 = #d50000
-
-
-
-$t = 'md-red-300'
-$c5 = '300'
-
-
-$r50 = $col+'1'
-$r100= $col+'2'
-$r200= $col+'3'
-$r300= $t+''
-$r400= $col+'5'
-$r500= $col+$c5
-$r600= $col+'7'
-$r700= $col+'8'
-$r800= $col+'9'
-$r900= $col+'10'
+html, body
+  height: auto
+  width: 100%
+  min-height: 100%
+  color: $grey_900
+  font-family: 'Roboto', sans-serif
+  font-size: 16px
 
 .content
   height: auto
   width: 980px
   margin: 0 auto
-  background-color: $var
+  overflow: auto
+  min-height: 200px
 
-  h1
-    color: $col10
-  h2
-    color: $r600
-  h3
-    color: $r300
+.container
+  width: 100%
+  height: 100%
+  margin: 0px
+  padding: 0px
+  min-height: 500px
+
+  header.header
+    height: 100vh
+    min-height: 500px
+
+  .content_wrap
+    height: 100%
+    width: 100%
+    padding-bottom: $foot_h
+    min-height: 500px
+
+    .wrapper
+      background-color: $grey_100
+
+footer.footer
+  height: $foot_h
+  margin-top: -($foot_h)
+  background-color: $col_700
 
 .clearfix:after
+  content: ''
   clear: both
   width: 100%
   height: 0px
