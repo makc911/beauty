@@ -1,37 +1,36 @@
 
-header.header()
-  .hhh(ng-include="'/views/header.html'")
-  .title_wrap
-    h1
-      | Nissodis
-    p
-      | Мастер профессионал превратит ваши мечты о краcоте в жизнь
-    div
-      {{test.message}}
-    nav.main_nav
-      .nav_item(ng-repeat="i in [1,2,3,4,5]")
-        {{$idex}} ssssssssssssss
-        a(href="" ng-bind="i")
-
-  .content.clearfix
-
-
-
+header.header(ng-controller="HeaderCtrl")
+  .hhh(ng-include="'/views/header.html'" replace)
 
 .content_wrap.clearfix
   #about_wrap.wrapper.about_wrap
+    h2.title
+      | О бо мне
     .content.clearfix
       | here must be 'about text'
   #depil_wrap.wrapper.depil_wrap
+    h2.title
+      | Восковая депиляция
     .content.clearfix
       | here must be about depilation text
-  #resnici_wrap.wrapper.resnici_wrap
+  #eyelashes_wrap.wrapper.resnici_wrap
+    h2.title
+      | Наращивание ресниц
     .content.clearfix
       | here must be about growing text
   #tatu_wrap.wrapper.tatu_wrap
+    h2.title
+      | Перманентный макияж
     .content.clearfix
       | here must be about tatu text
+  #piercing_wrap.wrapper.tatu_wrap
+    h2.title
+      | Пирсинг
+    .content.clearfix
+      | here must be about piercing text
   #contact_wrap.wrapper.contact_wrap
+    h2.title
+      | Контакты
     .content.clearfix
       | here must be map and other contact text
 
