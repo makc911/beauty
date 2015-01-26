@@ -1,34 +1,42 @@
 
-header.header(ng-controller="HeaderCtrl")
-  .hhh(ng-include="'/views/header.html'" replace)
+header#home.header(ng-controller="HeaderCtrl")
+  div(ng-include="'/views/header.html'" replace)
 
 .content_wrap.clearfix
-  #about_wrap.wrapper.about_wrap
+  #about.wrapper.about_wrap
     h2.title
-      | О бо мне
+      | Обо мне
     .content.clearfix
-      | here must be 'about text'
-  #depil_wrap.wrapper.depil_wrap
+      p.text
+        .text_img.img_01
+        span
+          |Мир таков, каков он есть. Трудно предположить, чтобы мир был создан единственно для удовлетворения наших потребностей. Это было бы чудом из чудес. Мир нейтрален. Он не дружествен и не враждебен человеку. Вам внушили, что человек рождается для того, чтобы умереть, и что вы должны всю жизнь терзаться этой мыслью. Чего ради? Смерть - не факт сознания. “Смысл раздумий о смерти в том, что они лишены смысла”, - писал Монтерлан. Смерть близких потрясает нас. А наша собственная? Бояться ее - значит представлять себе и мир, где мы есть, и мир, где нас нет. Эти два образа несовместимы.
+          |Вам внушили, что мы живем на краю пропасти…, но даже если мы идем по краю пропасти, ничто не толкает нас вниз.
+          |Вам внушили, что старые моральные ценности канули в прошлое*. Это ложь… Я напомню вам для начала несколько древних как мир истин…
+          |…Нельзя жить для себя. Думая только о себе, человек всегда найдет тысячу причин чувствовать себя несчастным. Никогда он не делал всего того, что хотел и должен был делать, никогда не получал всего того, чего, по его мнению, заслуживал, редко был любим так, как мечтал быть любимым. Без конца пережёвывая свое прошлое, он будет испытывать одни сожаления… Зачеркнуть прошлое все равно невозможно, попытайтесь лучше создать настоящее, которым вы… сможете гордиться. Всякий, кто живет ради других - ради своей страны, ради женщины, ради творчества, ради голодающих или гонимых, - словно по волшебству забывает свою тоску…
+
+
+  #depilation.wrapper.depil_wrap
     h2.title
       | Восковая депиляция
     .content.clearfix
       | here must be about depilation text
-  #eyelashes_wrap.wrapper.resnici_wrap
+  #eyelashes.wrapper.resnici_wrap
     h2.title
       | Наращивание ресниц
     .content.clearfix
       | here must be about growing text
-  #tatu_wrap.wrapper.tatu_wrap
+  #tattoo.wrapper.tatu_wrap
     h2.title
       | Перманентный макияж
     .content.clearfix
       | here must be about tatu text
-  #piercing_wrap.wrapper.tatu_wrap
+  #piercing.wrapper.tatu_wrap
     h2.title
       | Пирсинг
     .content.clearfix
       | here must be about piercing text
-  #contact_wrap.wrapper.contact_wrap
+  #contact.wrapper.contact_wrap
     h2.title
       | Контакты
     .content.clearfix

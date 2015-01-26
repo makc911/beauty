@@ -13,6 +13,7 @@ html(ng-app="beautyApp")
 <!--<![endif]-->
 head
   meta(charset="utf-8")
+  base(href="/")
   meta(http-equiv="X-UA-Compatible", content="IE=edge")
   title Nissodis
   meta(name="description", content="")
@@ -81,6 +82,9 @@ body()
 
   // build:js(.tmp) scripts/main.js
   script(src="scripts/app.js")
+
+  //services
+  script(src="scripts/services/content.js")
 
   //controllers
   script(src="scripts/controllers/main.js")

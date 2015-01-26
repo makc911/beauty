@@ -9,11 +9,11 @@ angular
     'duScroll'
   ])
 
-  .config ($routeProvider) ->
+  .config ($routeProvider, $locationProvider) ->
+    $locationProvider.html5Mode true
     $routeProvider
-      .when '/',
+      .when '/:path?',
         templateUrl: 'views/main.html'
         controller: 'MainCtrl'
       .otherwise
-        redirectTo: '/'
-
+        redirectTo: '/home'
