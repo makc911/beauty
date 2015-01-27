@@ -1,6 +1,26 @@
 angular.module('beautyApp').controller 'MainCtrl', ($scope, $routeParams, $location, $timeout, $document, $window, Content) ->
 
   $scope.timeToChange = ''
+  $scope.isPrice =
+    depil: false
+    piercing: false
+    tattoo: false
+    eyelashes: false
+
+  $scope.depilList = [
+    {title:"Бикини", price: "150.00"},
+    {title:"Депиляция голени", price: "80.00"},
+    {title:"Верхняя поверхность бедра", price: "80.00"},
+    {title:"Полная депиляция ног", price: "120.00"},
+    {title:"Руки (предплечье)", price: "40.00"},
+    {title:"Полная депиляция ног", price: "60.00"},
+    {title:"Подмышки", price: "50.00"},
+    {title:"Верхняя губа", price: "25.00"},
+    {title:"Подбородок", price: "25.00"},
+    {title:"Спина (поясница)", price: "40.00"},
+    {title:"Полная депиляция спины", price: "100.00"},
+    {title:"Ореол груди", price: "20.00"}
+  ]
 
   if !$routeParams.path
     console.log "Path is empty"
@@ -32,5 +52,8 @@ angular.module('beautyApp').controller 'MainCtrl', ($scope, $routeParams, $locat
         ,200
 
   $window.addEventListener 'scroll', changePath
+
+  $scope.showPrise = (type) ->
+    $scope.isPrice[type] = !$scope.isPrice[type]
 
 

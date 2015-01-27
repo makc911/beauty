@@ -1,0 +1,61 @@
+@import "../variables"
+
+/*-----------------------------------*/
+
+.price_wrap
+  width: 100%
+  height: auto
+  padding: 10px 0
+
+  a.price_show
+    color: $col_500
+    text-decoration: none
+    font-weight: 600
+
+    &:before
+      content: '+ '
+
+    &:hover
+      border-bottom: $col_500 dotted 1px
+
+  ul.price_list
+    display: none
+    height: 0px
+    width: 75%
+    min-width: 400px
+    max-width: 740px
+    opacity: 0
+    transition: all 1s ease 0
+
+    li
+      padding: 5px 10px
+      border-top: $col_100 solid 1px
+      display: block
+      vertical-align: middle
+
+      &:last-child
+        border-bottom: $col_100 solid 1px
+
+      span
+        display: inline-block
+        vertical-align: middle
+
+      span.title
+        width: 80%
+
+      span.price
+        width: 110px
+        text-align: right
+
+
+
+  &.active
+
+    a.price_show
+      &:before
+        content: '- '
+
+    ul.price_list
+      display: block
+      height: auto
+      opacity: 1

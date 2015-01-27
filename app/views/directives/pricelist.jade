@@ -1,0 +1,6 @@
+.price_wrap(ng-class="{'active':isPriceShow}")
+  a.price_show(href="" ng-click="showPrise()") Стоимость услуг:
+  ul.price_list
+    li(ng-repeat="item in list")
+      span.title(ng-bind="item.title")
+      span.price(ng-bind="item.price + ' грн.'")
