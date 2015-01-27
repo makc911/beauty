@@ -1,6 +1,7 @@
 angular.module('beautyApp').controller 'MainCtrl', ($scope, $routeParams, $location, $timeout, $document, $window, Content) ->
 
-  console.log "Route params", $routeParams
+  $scope.timeToChange = ''
+
   if !$routeParams.path
     console.log "Path is empty"
     $location.path("/home")
@@ -19,16 +20,16 @@ angular.module('beautyApp').controller 'MainCtrl', ($scope, $routeParams, $locat
   init()
 
   changePath = ->
-#    console.log "$window.scrollY - #{$window.scrollY}"
     newSection = Content.getSectionIdByY $window.scrollY
     if newSection != currentSection
-      console.log "New section - #{newSection}, old section - #{currentSection}, $window.innerHeight  #{$window.innerHeight}"
       currentSection = newSection
-      $location.path(currentSection)
-      $location.replace()
-      history.pushState null, '', $location.url()
-
-#    console.log "offset_bottom - #{offset_bottom}. document.body.offsetHeight - #{document.body.offsetHeight}. $window.innerHeight - #{$window.innerHeight}"
+      $timeout.cancel $scope.timeToChange
+      $scope.timeToChange = $timeout ->
+          Content.goScreen currentSection, false
+          $location.path(currentSection)
+          $location.replace()
+          history.pushState null, '', $location.url()
+        ,200
 
   $window.addEventListener 'scroll', changePath
 

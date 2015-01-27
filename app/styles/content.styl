@@ -21,20 +21,76 @@
       background: -moz-linear-gradient(90deg, rgba($col_300, 1) 0%, rgba($col_500, 1) 10%, rgba($col_300, 1) 75%, rgba($col_100, 1) 100%)
 
     p.text
-
+      margin: 15px 0
       position: relative
+      text-align: justify
 
       span
         font-weight: 400
         font-size: 1rem
-        color: $gray_800
+        color: $grey_800
         text-indent: 30px
+        line-height: 1.75em
+
+        &.title
+          font-weight: 600
+          color: $grey_900
 
       .text_img
-        display: inline-block
-        float: left
-        width: 400px
-        height: 320px
-        background-size: cover
-        border: #000 solid 1px
+        width: 320px
+        border: $col_50 solid 1px
+
+        &.left
+          float: left
+          margin: 2px 10px 10px 0
+
+        &.right
+          float: right
+          margin: 2px 0px 10px 10px
+
+    .art_bottom
+      width: 100%
+      height: 70px
+      padding: 10px 0
+
+      .btn
+        float: right
+
+
+.btn
+  display: block
+  position: relative
+  color: #fff
+  border-bottom: 1px solid $col_700
+  border-top: 1px solid $col_700
+  width: 180px
+  height: 50px
+  text-align: center
+  font-size: 1.5rem
+  line-height: 1.875em
+  cursor: pointer
+  font-weight: 500
+  background: rgba($col_400, 1)
+  overflow: hidden
+
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    z-index: 1
+    top: 50%
+    left: 50%
+    right: 50%
+    height: 0px
+    box-shadow: none
+    transition: all 0.3s ease 0
+
+  &:hover
+    &:after
+      left: 10%
+      right: 10%
+      box-shadow: 0 0 30px 15px rgba(#fff,0.35)
+      -moz-box-shadow: 0 0 30px 15px rgba(#fff,0.35)
+
+
 
