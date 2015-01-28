@@ -53,14 +53,26 @@
       height: 70px
       padding: 10px 0
 
+      a.photo
+        margin-top: 10px
+        display: inline-block
+        color: $col_200
+
+        &:visited
+          color: $grey_400
+
       .btn
         float: right
+      a.btn
+        float: left
 
 
 
 
 
 .btn
+  text-decoration: none
+  float: left
   display: block
   position: relative
   color: #fff
@@ -70,11 +82,12 @@
   height: 40px
   text-align: center
   font-size: 1.25rem
-  line-height: 1.75em
+  line-height: 1.9em
   cursor: pointer
   font-weight: 500
   background: rgba($col_400, 1)
   overflow: hidden
+  /*margin-left: 20px*/
 
   &:after
     content: ''

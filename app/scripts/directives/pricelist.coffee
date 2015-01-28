@@ -1,4 +1,4 @@
-angular.module('beautyApp').directive 'priceList', () ->
+angular.module('beautyApp').directive 'priceList', ($rootScope) ->
 
   return {
   restrict: 'AE'
@@ -12,6 +12,6 @@ angular.module('beautyApp').directive 'priceList', () ->
 
     scope.showPrise = () ->
       scope.isPriceShow = !scope.isPriceShow
-
+      $rootScope.$broadcast 'blockSize.changed'
 
   }
